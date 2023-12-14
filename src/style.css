@@ -24,8 +24,12 @@ html{
 
 body {
   /* default bg color */
-  background-color: var(--almost-white);
   padding: 2.1rem 4rem 0 4rem;
+  background-color: var(--almost-white);
+}
+.container{
+    max-width: 144rem;
+    margin: auto;
 }
 ul{
     list-style: none;
@@ -68,6 +72,9 @@ ul{
     color:var(--dark-grey);
     background-color:transparent;
 }
+.header-right button:last-child:hover{
+    border-color:var(--black)!important;
+}
 .header-right button:last-child{
     border: .15rem solid var(--dark-grey);
     border-radius: 1.4rem;
@@ -75,6 +82,66 @@ ul{
     color:var(--dark-grey);
     background-color:transparent;
     padding: 1.3rem 2.3rem;
+}
+
+/* here */
+.main{
+    padding: 6.7rem 10rem 0 10rem;
+    display: flex;
+    gap: 12.5rem;
+}
+.main-body{
+    flex: 1;
+    padding-top: 10.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.main-body article{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+}
+.main-body h1{
+    color: var(--black);
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: -.11rem;
+    line-height: 8rem;
+
+    }
+.main-body p{
+    font-size: 1.8rem;
+    color:var(--dark-grey);
+    font-weight: 500;
+    line-height: 2.8rem;
+}
+.main-body button{
+    width: 16.3rem;
+    height: 5.8rem;
+    font-size: 1.8rem;
+    border-radius: 1.5rem;
+    color:var(--almost-white);
+    background-color: var(--black);
+    font-weight: 700;
+    padding: 1.5rem 2.8rem 1.3rem 3.1rem;
+    border: none;
+}
+
+.main-body ul{
+    display: flex;
+    gap: 4.4rem;
+}
+
+.main-img{
+    flex: 1;
+
+}
+
+.main-img img{
+    width: 100%;
 }
 
 
