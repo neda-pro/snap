@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue&display=swap");
+
+:root {
+  --black: #151515;
+  --dark-grey: #686868;
+  --light-grey: #adadad;
+  --almost-white: #fafafa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  font-family: "Epilogue", sans-serif;
+  /* default bg color */
+  background-color: var(--almost-white);
+}
