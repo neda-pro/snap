@@ -12,11 +12,12 @@
   padding: 0;
   box-sizing: border-box;
   box-sizing: border-box;
-  text-transform: capitalize;
   font-family: "Epilogue", sans-serif;
-
 }
 
+*::first-letter{
+text-transform: capitalize;
+}
 html{
   /* 1rem = 10px */
   font-size: 62.5%;
@@ -30,6 +31,9 @@ body {
 .container{
     max-width: 144rem;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 ul{
     list-style: none;
@@ -37,6 +41,7 @@ ul{
 
 .header{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -137,11 +142,103 @@ ul{
 
 .main-img{
     flex: 1;
-
 }
 
 .main-img img{
     width: 100%;
+}
+
+/* base form container for wrapping register and login */
+
+.base-container{
+    width:50rem;
+    background-color: white;
+    margin-top: 23.4rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+/* registration section */
+.register-form{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+}
+.register-form input{
+    height: 4rem;
+    border-radius: 1rem;
+    padding-left: 4rem;
+    border: .1rem solid var(--light-grey) ;
+    opacity: .7;
+    color: var(--black);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.register-form input[name="name"]{
+    background: url("./assets/images/person.png") no-repeat 1rem ;
+    background-size: 2rem;
+}
+.register-form input[name="email"]{
+    background: url("./assets/images/mail.png") no-repeat 1rem ;
+    background-size: 2rem;
+}
+.register-form input[name="password"]{
+    background: url("./assets/images/lock.png") no-repeat 1rem ;
+    background-size: 2rem;
+}
+.register-form input[name="confirm-password"]{
+    background: url("./assets/images/lock.png") no-repeat 1rem ;
+    background-size: 2rem;
+}
+.register-form button{
+    font-size: 1.6rem;
+    border-radius: 1.2rem;
+    color:var(--almost-white);
+    background-color: var(--black);
+    font-weight: 700;
+    padding: 1.5rem 2.8rem 1.3rem 3.1rem;
+    border: none;
+    margin-top: 2rem;
+}
+.register-form button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+.register-with{
+    margin-top: 4rem;
+    color:var(--dark-grey);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.register-social-wrapper{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+}
+.register-social-wrapper button{
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    font-size: 3rem;
+    color: var(--black);
+}
+.register-social-wrapper button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+.register-terms{
+    margin-top: 4rem;
+    color:var(--light-grey);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 
