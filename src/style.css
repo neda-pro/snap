@@ -196,6 +196,25 @@ ul{
     background: url("./assets/images/lock.png") no-repeat 1rem ;
     background-size: 2rem;
 }
+.password-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--dark-grey);
+}
+.password-info div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.password-info div:hover{
+    color: var(--black);
+}
+.password-info a:hover{
+    cursor: default;
+    color: var(--black);
+}
 .register-form button{
     font-size: 1.6rem;
     border-radius: 1.2rem;

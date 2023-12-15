@@ -9,7 +9,7 @@ const Register = () => {
   return (
     <div className="base-container">
       <AppLogo />
-      <form className="register-form">
+      <form className="register-form" id="login-form">
         <input type="text" name="name" placeholder="John Doe" />
         <input type="email" name="email" placeholder="mail@example.com" />
         <input type="password" name="password" placeholder="Password" />
