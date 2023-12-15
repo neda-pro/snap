@@ -1,7 +1,8 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import AppLogo from "../assets/images/logo.svg?react";
 
 const Root = () => {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <header className="header">
@@ -15,8 +16,20 @@ const Root = () => {
           </ul>
         </nav>
         <div className="header-right">
-          <button>login</button>
-          <button>register</button>
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
+            login
+          </button>
+          <button
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
+            register
+          </button>
         </div>
       </header>
       <Outlet />
