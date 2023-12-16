@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import AppLogo from "../assets/images/logo.svg?react";
 import { useNavbarStore } from "../store/store";
+import AppLogo from "../components/AppLogo";
 
 const Root = () => {
   const { hideLoginBtn, hideRegisterBtn } = useNavbarStore();

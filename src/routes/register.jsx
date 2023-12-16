@@ -1,4 +1,3 @@
-import AppLogo from "../assets/images/logo.svg?react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -7,6 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
 import { useNavbarStore } from "../store/store";
+import AppLogo from "../components/AppLogo";
 
 const Register = () => {
   const { toggleRegisterBtn } = useNavbarStore();
