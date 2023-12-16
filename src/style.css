@@ -46,7 +46,6 @@ ul{
     align-items: center;
     min-height: 6rem;
 }
-
 .header-left{
     display: flex;
     gap: 6.2rem;
@@ -90,6 +89,19 @@ ul{
     padding: 1.3rem 2.3rem;
 }
 
+.mobile-header{
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 6rem; 
+}
+.bars-icon{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
 /* here */
 .main{
     padding: 6.7rem 10rem 0 10rem;
@@ -108,7 +120,6 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 5rem;
-
 }
 .main-body h1{
     color: var(--black);
@@ -266,5 +277,135 @@ ul{
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+/* media query */
+@media(max-width: 1440px){
+    .main-body article{
+        gap: 5rem;
+    }
+    .main-body h1{
+        font-size: 6rem;
+        font-weight: 600;
+        line-height: 6rem;
+    
+        }
+    .main-body p{
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+    .main-body button{
+        width: 14.3rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }  
+    .main-body ul{
+        gap: 3.5rem;
+    }
+}
+@media(max-width: 1270px){
+
+    .main-body article{
+        gap: 3rem;
+    }
+    .main-body h1{
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 4rem;
+        }
+    .main-body p{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+    }
+    .main-body button{
+        height: 4.2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }  
+    .main-body ul{
+        gap: 3rem;
+    }
+}
+@media(max-width: 1196px){
+
+    .main{
+        flex-direction: column-reverse;
+        gap: unset
+    }
+    .main-img img{
+        height: 40rem;
+        object-fit: cover;
+    }
+
+    .main-body article{
+        gap: 5rem;
+    }
+    .main-body h1{
+        font-size: 8rem;
+        font-weight: 700;
+        line-height: 8rem;
+    
+        }
+    .main-body p{
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+    }
+    .main-body button{
+        width: 16.3rem;
+        height: 5.8rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    .main-body ul{
+        gap: 4.4rem;
+        margin-top: 4rem;
+    }
+}
+@media(max-width: 804px){
+    body{
+        padding: 0;
+    }
+    .header{
+        display: none
+    }
+    .mobile-header{
+        display: flex;
+        padding: 0 3rem ;
+    }
+    .main{
+        padding: 0 ;
+    }
+    .main-img img{
+        height: 30rem;
+    }
+    .main-body article{
+        gap: 3rem;
+        padding:0 3rem;
+    }
+    .main-body h1{
+        font-size: 6rem;
+        font-weight: 600;
+        line-height: 6rem;
+    
+        }
+    .main-body p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+    .main-body button{
+        height: 4.2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .main-body ul{
+        gap: 3rem;
+        padding:0 3rem;
+    }
+}
+
 
 
