@@ -5,7 +5,20 @@ import {
   faGoogle,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
+import { useNavbarStore } from "../store/store";
+
 const Register = () => {
+  const { toggleRegisterBtn } = useNavbarStore();
+
+  useEffect(() => {
+    // hide register btn on mount
+    toggleRegisterBtn();
+    //show register btn when leaving the page(unmount)
+    return () => {
+      toggleRegisterBtn();
+    };
+  }, []);
   return (
     <div className="base-container">
       <AppLogo />

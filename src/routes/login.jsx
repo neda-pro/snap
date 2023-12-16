@@ -5,8 +5,19 @@ import {
   faGoogle,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect } from "react";
+import { useNavbarStore } from "../store/store";
 
 const Login = () => {
+  const { toggleLoginBtn } = useNavbarStore();
+
+  useEffect(() => {
+    toggleLoginBtn();
+    return () => {
+      toggleLoginBtn();
+    };
+  }, []);
+
   return (
     <div className="base-container">
       <AppLogo />

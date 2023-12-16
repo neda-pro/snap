@@ -1,8 +1,11 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import AppLogo from "../assets/images/logo.svg?react";
+import { useNavbarStore } from "../store/store";
 
 const Root = () => {
+  const { hideLoginBtn, hideRegisterBtn } = useNavbarStore();
   const navigate = useNavigate();
+
   return (
     <div className="container">
       <header className="header">
@@ -17,6 +20,7 @@ const Root = () => {
         </nav>
         <div className="header-right">
           <button
+            hidden={hideLoginBtn}
             onClick={() => {
               navigate("/login");
             }}
@@ -24,6 +28,7 @@ const Root = () => {
             login
           </button>
           <button
+            hidden={hideRegisterBtn}
             onClick={() => {
               navigate("/register");
             }}

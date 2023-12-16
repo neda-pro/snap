@@ -1,6 +1,9 @@
 import { create } from "zustand";
 
-export const useCountStore = create((set) => ({
-  count: 0,
-  addCount: () => set((state) => ({ count: state.count + 1 })),
+export const useNavbarStore = create((set) => ({
+  hideLoginBtn: false,
+  hideRegisterBtn: false,
+  toggleLoginBtn: () => set((state) => ({ hideLoginBtn: !state.hideLoginBtn })),
+  toggleRegisterBtn: () =>
+    set((state) => ({ hideRegisterBtn: !state.hideRegisterBtn })),
 }));
