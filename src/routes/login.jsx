@@ -9,10 +9,11 @@ import { useNavbarStore } from "../store/store";
 import AppLogo from "../components/AppLogo";
 
 const Login = () => {
-  const { toggleLoginBtn } = useNavbarStore();
+  const { toggleLoginBtn, onClickShowModal } = useNavbarStore();
 
   useEffect(() => {
     toggleLoginBtn();
+    onClickShowModal(false);
     return () => {
       toggleLoginBtn();
     };

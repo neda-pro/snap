@@ -9,11 +9,12 @@ import { useNavbarStore } from "../store/store";
 import AppLogo from "../components/AppLogo";
 
 const Register = () => {
-  const { toggleRegisterBtn } = useNavbarStore();
+  const { toggleRegisterBtn, onClickShowModal } = useNavbarStore();
 
   useEffect(() => {
     // hide register btn on mount
     toggleRegisterBtn();
+    onClickShowModal(false);
     //show register btn when leaving the page(unmount)
     return () => {
       toggleRegisterBtn();

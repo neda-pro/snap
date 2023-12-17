@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 const Root = () => {
-  const { hideLoginBtn, hideRegisterBtn } = useNavbarStore();
+  const { hideLoginBtn, hideRegisterBtn, showModal, onClickShowModal } =
+    useNavbarStore();
+
   const navigate = useNavigate();
 
   return (
@@ -41,11 +43,23 @@ const Root = () => {
       </header>
       <header className="mobile-header">
         <AppLogo />
-        <FontAwesomeIcon className="bars-icon" icon={faBars} />
+        <FontAwesomeIcon
+          className="bars-icon"
+          icon={faBars}
+          onClick={() => onClickShowModal(true)}
+        />
       </header>
-      <div className="modal">
-        <div>
-          <FontAwesomeIcon className="menu-close" icon={faClose} />
+      <div
+        className="modal"
+        style={{ display: showModal ? "flex" : "none" }}
+        onClick={() => onClickShowModal(false)}
+      >
+        <div onClick={(e) => e.stopPropagation()}>
+          <FontAwesomeIcon
+            className="menu-close"
+            icon={faClose}
+            onClick={() => onClickShowModal(false)}
+          />
           <ul>
             <li>feature</li>
             <li>company</li>
