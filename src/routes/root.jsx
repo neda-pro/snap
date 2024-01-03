@@ -3,10 +3,16 @@ import { useNavbarStore } from "../store/store";
 import AppLogo from "../components/AppLogo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-
+import Intro from "./intro";
 const Root = () => {
-  const { hideLoginBtn, hideRegisterBtn, showModal, onClickShowModal } =
-    useNavbarStore();
+  const {
+    hideLoginBtn,
+    hideRegisterBtn,
+    showModal,
+    onClickShowModal,
+    isHome,
+    setIsHome,
+  } = useNavbarStore();
 
   const navigate = useNavigate();
 
@@ -26,6 +32,7 @@ const Root = () => {
           <button
             hidden={hideLoginBtn}
             onClick={() => {
+              setIsHome(false);
               navigate("/login");
             }}
           >
@@ -34,6 +41,7 @@ const Root = () => {
           <button
             hidden={hideRegisterBtn}
             onClick={() => {
+              setIsHome(false);
               navigate("/register");
             }}
           >
@@ -70,6 +78,7 @@ const Root = () => {
             <button
               hidden={hideLoginBtn}
               onClick={() => {
+                setIsHome(false);
                 navigate("/login");
               }}
             >
@@ -78,6 +87,7 @@ const Root = () => {
             <button
               hidden={hideRegisterBtn}
               onClick={() => {
+                setIsHome(false);
                 navigate("/register");
               }}
             >
@@ -86,7 +96,8 @@ const Root = () => {
           </div>
         </div>
       </div>
-      <Outlet />
+
+      {isHome ? <Intro /> : <Outlet />}
     </div>
   );
 };

@@ -35,7 +35,7 @@ const Intro = () => {
         </ul>
       </section>
       <section className="main-img">
-        <img src="src/assets/images/image-hero-desktop.png"></img>
+        <img src="/image-hero-desktop.png"></img>
       </section>
     </main>
   );
