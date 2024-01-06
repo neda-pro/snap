@@ -1,8 +1,17 @@
-# React + Vite
+_Note: This is a demo project!_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Snap
+Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
 
-Currently, two official plugins are available:
+# technology set
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/)
+
+- JavaScript
+
+- CSS3
+
+- [React Router](https://reactrouter.com/en/main)
+
+- [Zustand](https://zustand-demo.pmnd.rs/)
+
